@@ -19,29 +19,41 @@ Buatlah dalam bahasa pemrograman Python, program penerjemah sederhana yang meman
 11. Batas pengerjaannya adalah 6 Juni 2020.
 
 ## Contoh Kasus Uji
+```
 Sunda - Indonesia
 Sunda : nami abdi Riyugan
 Indonesia : nama saya Riyugan
+```
 
+```
 Sunda - Indonesia
 Sunda : abdi teh sanes jalma Bandung
 Indonesia : saya bukan orang Bandung
+```
 
+```
 Sunda - Indonesia
 Sunda : anjeun sumping ti mana?
 Indonesia : kamu tiba dari mana?
+```
 
+```
 Indonesia - Sunda
 Indonesia : nama saya Riyugan
 Sunda : nami abdi Riyugan
+```
 
+```
 Indonesia - Sunda
 Indonesia : nama adik kamu siapa?
 Sunda : nami rai anjeun teh saha?
+```
 
+```
 Indonesia - Sunda
 Indonesia : saya tidak bisa bahasa Sunda
 Sunda : abdi henteu tiasa bahasa Sunda
+```
 
 ## Pengumpulan
 1. Lakukan merge request dari hasil fork kalian ke repository ini
