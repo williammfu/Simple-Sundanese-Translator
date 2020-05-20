@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+.center {
+    text-align: center;
+}
+
+h1 {
+    color: #c03546;
+}
+
+textarea {
+    resize: none;
+    white-space: normal;
+    text-align: justify;
+}
+
+textarea:focus {
+    border-color: #c03546;
+}
+
+input[type=submit] {
+    width: 180px;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color:#c03546;
+    color:white;
+}
+
+#opt {
+    font-weight: 1000;
+    color: #582233;
+}

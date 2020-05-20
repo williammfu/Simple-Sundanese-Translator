@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <head>
+        <title>Sampurasun!</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"/>
+        <style>
+            body, textarea, input {
+                font-family: 'Open Sans', sans-serif;
+            }
+        </style>
+    </head>
+    
+    
+    
+    <body>
+        <div class="center">
+        
+            <h1>Penerjemah Sederhana</h1>
+
+        </div>
+
+            <form action="{{url_for('home')}}" method="post">
+            
+                <!-- Radio buttons -->
+                <table style="width: 60%; margin: auto;">
+                    <tr>
+                        <td id="opt">Terjemahan</td>
+                        <td> <input type="radio" name="lang" checked="checked" value="ind"> Indonesia-Sunda </input> </td>
+                        <td> <input type="radio" name="lang" value="sun"> Sunda-Indonesia </input> </td>
+                    </tr>
+                    <tr>
+                        <td id="opt">Algoritma</td>
+                        <td> <input type="radio" name="alg" checked="checked" value="bm"> Boyer-Moore </input> </td>
+                        <td> <input type="radio" name="alg" value="kmp"> Knuth-Morris-Pratt </input> </td>
+                        <td> <input type="radio" name="alg" value="re"> Regular Expression </input> </td>
+                    </tr>
+                </table>
+                
+                <br>
+                <br>
+
+                <!-- Text area -->
+                <table style="margin:auto;">
+                    <tr>
+                        <th> Masukan </th>
+                        <th> Terjemahan </th>
+                    </tr>
+                    <tr>
+                        <td>
+                        <textarea name="text" rows=10 cols=40> 
+                        </textarea><br><br>
+                        </td>
+
+                        <td>
+                        <textarea name="results" rows=10 cols=40 disabled>
+                            {{translation}} 
+                        </textarea><br><br>
+                        </td>
+                    </tr>
+                </table>
+
+                <div style="text-align: center;">
+                    <input type="submit" value="Terjemahkan" style="text-align: center;">
+                </div>
+                
+            </form>
+        
+    </body>
+
+</html>

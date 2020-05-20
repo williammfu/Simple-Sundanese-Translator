@@ -1,62 +1,68 @@
 # Simple Sundanese Translator
 Simple Sundanese to Bahasa Indonesia translator using Pattern Matching
 
-## Latar Belakang
-Pada suatu hari, ada mahasiswa bernama Riyugan yang baru pindah ke Bandung. Pada awalnya dia mengalami kesulitan untuk bersosialisai dengan lingkungan sekitar karena orang-orang di lingkungannya yang baru hanya berbicara dalam bahasa Sunda. Beruntungnya Riyugan punya teman dari kampung halamannya, yaitu Anda, untuk diminta membuat penerjemah sederhana dari Bahasa Sunda ke Bahasa Indonesia begitu pula sebaliknya untuk memudahkan dirinya bersosialisasi dengan lingkungan barunya di Bandung.
+## Getting Started
+Aplikasi ini disusun dengan bahasa pemrograman Python dan memanfaatkan kakas Flask. 
 
-## Spesifikasi
-Buatlah dalam bahasa pemrograman Python, program penerjemah sederhana yang memanfaatkan algoritma String Matching (Knuth-Morris-Pratt(KMP), Boyer-Moore(BM), dan Regex), dengan spesifikasi sebagai berikut.
-1. Program mampu membaca kata atau kalimat yang akan diterjemahkan.
-2. Program akan membaca file eksternal yang berisi vocabulary Bahasa Sunda - Bahasa Indonesia (file sudah disiapkan dalam repository).
-3. Program akan melakukan penerjemahan secara perkata (untuk contoh akan ditampilkan di bawah).
-4. Program dapat memilih mau "Bahasa Sunda ke Bahasa Indonesia" atau "Bahasa Indonesia ke Bahasa Sunda".
-5. Pada saat penerjemahan "Bahasa Sunda ke Bahasa Indonesia", program mampu mengenali kata yang tidak memiliki arti (stopwords), seperti "teh" sehingga dapat diabaikan saat penerjemahan.
-6. Pada saat penerjemahan "Bahasa Indonesia ke Bahasa Sunda", program mampu menambahkan kata untuk penekanan kalimat, seperti "teh".
-7. Program dapat menampilkan hasil terjemahan.
-8. Program dibuat secara individu.
-9. Peserta akan mendapatkan nilai bonus jika mengimplementasikan dalam web (untuk bahasanya dibebaskan).
-10. Dilarang meng-copy source code program yang sudah jadi, untuk source code algoritma string matching dipersilahkan menggunakan source code dari tugas yang sudah pernah dibuat (Tugas Kecil 4).
-11. Batas pengerjaannya adalah 6 Juni 2020.
+### Prerequisite
+Untuk menjalankan aplikasi ini, pastikan perangkat anda telah memiliki dependencies berikut ini:
+- Python (versi 3.7.0)
+- Flask (versi 1.1.2)
 
-## Contoh Kasus Uji
+Untuk memeriksa apakah anda telah memiliki dependencies yang sesuai, anda dapat menjalankan perintah berikut pada CMD atau Terminal perangkat anda
+- Windows
+```script
+python --version
+Flask --version
 ```
-Sunda - Indonesia
-Sunda : nami abdi Riyugan
-Indonesia : nama saya Riyugan
+- Linux (Ubuntu 18.04)
+```
+python3 -m Flask --version
 ```
 
+### Installing
+Anda dapat menggunakan perintah berikut pada CMD/terminal untuk menginstal prerequisites yang dibutuhkan
+- Windows
+```script
+    pip install Flask==1.1.2
 ```
-Sunda - Indonesia
-Sunda : abdi teh sanes jalma Bandung
-Indonesia : saya bukan orang Bandung
-```
-
-```
-Sunda - Indonesia
-Sunda : anjeun sumping ti mana?
-Indonesia : kamu tiba dari mana?
-```
-
-```
-Indonesia - Sunda
-Indonesia : nama saya Riyugan
-Sunda : nami abdi Riyugan
+- Linux (Ubuntu 18.04)
+```script
+    pip3 install Flask==1.1.2
 ```
 
+## Running The App
+Jalankan perintah berikut pada command prompt/ terminal perangkat anda di direktori `src`
+- Windows
 ```
-Indonesia - Sunda
-Indonesia : nama adik kamu siapa?
-Sunda : nami rai anjeun teh saha?
+    python app.py
+```
+- Linux
+```
+    python3 app.py
+```
+Apabila berhasil, anda akan melihat pesan berikut pada command prompt/ terminal anda
+``` 
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 107-696-203
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
-```
-Indonesia - Sunda
-Indonesia : saya tidak bisa bahasa Sunda
-Sunda : abdi henteu tiasa bahasa Sunda
-```
+Jalankan aplikasi dengan mengakses link yang tertulis setelah pesan `Running on` , pada kasus ini, aplikasi diakses pada `http://127.0.0.1:5000/` akan memiliki tampilan sebagai berikut.
+![Running The App](ss.PNG)
 
-## Pengumpulan
-1. Lakukan merge request dari hasil fork kalian ke repository ini
-2. Untuk demonya, silahkan membuat video demo penggunaan programnya, diupload ke YouTube dan sertakan linknya pada Readme.
+### Testing
+Berikut ini adalah langkah untuk menjalankan aplikasi
 
-### **_(Ubah file README ini pada repository hasil fork kalian)_**
+1. Menjalankan program dengan perintah `python app.py` (sesuai langkah yang dijelaskan sebelumnya)
+2. Memilih opsi terjemahan dan algoritma yang diinginkan
+3. Memasukkan teks yang diinginkan pada kolom "Masukan"
+4. Menekan tombol "Terjemahkan"
+5. Hasil terjemahan akan muncul pada kolom teks "Terjemahan"
+
+
+## Demo
+Video demo aplikasi ini dapat diakses melalui link [berikut](https://youtu.be/h5-7ux_shN0)
